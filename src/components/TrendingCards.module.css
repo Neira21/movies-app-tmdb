@@ -1,0 +1,99 @@
+.container_trending{
+  display: flex;
+  /* deslizamiento */
+  overflow-x: scroll;
+  column-gap: 15px;
+  margin-bottom: 20px;
+  /* background degradado azul */
+  padding-bottom: 20px;
+  
+}
+
+/* Cambiar el diseño del scroll */
+.container_trending::-webkit-scrollbar {
+  width: 8px; /* Ancho del scroll */
+  height: 10px; /* Alto del scroll en el eje X */
+  padding: 10px;
+}
+
+
+
+/* Diseño del thumb (parte que se mueve) */
+.container_trending::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Color del thumb */
+  border-radius: 10px; /* Redondeo del thumb */
+  border: 2px solid transparent; /* Espacio alrededor del thumb */
+  cursor: pointer; /* Cambiar el cursor al pasar por el scroll */
+  ;
+}
+
+/* Thumb al hacer hover */
+.container_trending::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.8); /* Color más claro cuando se hace hover */
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_trending_card {
+  border-radius: 20px;
+  object-fit: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.container_trending_card_img{
+  position: relative;
+}
+
+.trending_card_img{
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+  height: 200px;
+  width: 150px;
+}
+
+.trending_card_img:hover{
+  opacity: 0.9;
+  transition: 0.5s;
+  transform: scale(1.10);
+}
+
+.trending_card_title {
+  font-weight: 600;
+  color: white;
+  font-size: 0.7rem;
+  background-color: black;
+  border-radius: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+  padding: 5px;
+}
+
+
+.trending_card_valoration{
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  padding: 10px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+
+  
+}
+

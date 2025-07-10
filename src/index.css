@@ -1,0 +1,188 @@
+/* Estilos generales */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* degradado */
+  background: linear-gradient(270deg, rgba(1, 233, 250, 0.9) 0%, rgba(0, 12, 246, 0.591) 100%);
+}
+
+.seleccionado{
+  background-color: red;
+  color: white;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: x-large;
+}
+
+button {
+  right: 600px;
+  padding: 5px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.container{
+  display: flex;
+  width: 100%;
+}
+
+.container-categories{
+  overflow-y: auto;
+  width: 15%;
+  height: 100vh; /* Fijar la altura al 100% de la ventana */
+  position: sticky; /* Fijar el contenedor al hacer scroll */
+  top: 0; /* Mantiene el contenedor fijo en la parte superior */
+}
+
+.container-list{
+  overflow-y: auto;
+  width: 85%;
+  /* espacio restante del 100vh */
+  height: 90%;
+  
+}
+
+.container-categories::-webkit-scrollbar {
+  display: none; /* Ocultar barra de scroll en Chrome, Safari y Edge */
+}
+
+.container-load-more{
+  margin: auto;
+}
+
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  color: #000;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 250px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card img:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  transform: scale(0.95);
+}
+
+.card h2 {
+  max-width: 200px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin-bottom: 5px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin: 15px;
+}
+
+
+
+
+
+/* NOT FOUND PAGE*/
+.not-found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.not-found h2{
+  font-size: 24px;
+}
+
+.not-found img{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+
+
+
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .not-found img{
+    width: 100%;
+  }
+}
